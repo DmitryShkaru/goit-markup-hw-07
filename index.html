@@ -51,6 +51,15 @@
             </li>
           </ul>
         </address>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-btn"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -128,7 +137,12 @@
           <ul class="second-sect-list list">
             <li class="second-sect-item">
               <img
-                src="./images/whatarewedoing/img-1.jpg"
+                srcset="
+                  ./images/whatarewedoing/img-1_360.jpg 360w,
+                  ./images/whatarewedoing/img-1_720.jpg 720w
+                "
+                sizes="(min-width: 1200px) 360px, 100vw"
+                src="./images/whatarewedoing/img-1_360.jpg"
                 alt="desktop"
                 width="360"
                 height="300"
@@ -136,7 +150,12 @@
             </li>
             <li class="second-sect-item">
               <img
-                src="./images/whatarewedoing/img-2.jpg"
+                srcset="
+                  ./images/whatarewedoing/img-2_360.jpg 360w,
+                  ./images/whatarewedoing/img-2_720.jpg 720w
+                "
+                sizes="(min-width: 1200px) 360px, 100vw"
+                src="./images/whatarewedoing/img-2_360.jpg"
                 alt="mobile"
                 width="360"
                 height="300"
@@ -144,7 +163,12 @@
             </li>
             <li class="second-sect-item">
               <img
-                src="./images/whatarewedoing/img-3.jpg"
+                srcset="
+                  ./images/whatarewedoing/img-3_360.jpg 360w,
+                  ./images/whatarewedoing/img-3_720.jpg 720w
+                "
+                sizes="(min-width: 1200px) 360px, 100vw"
+                src="./images/whatarewedoing/img-3_360.jpg"
                 alt="laptop wish mobile"
                 width="360"
                 height="300"
@@ -161,7 +185,11 @@
           <ul class="third-sect-list list">
             <li class="team-item">
               <img
-                src="./images/ourteam/img.jpg"
+                srcset="
+                  ./images/ourteam/img1_264.jpg 264w,
+                  ./images/ourteam/img1_528.jpg 528w
+                "
+                src="./images/ourteam/img1_264.jpg"
                 alt="photo Mark"
                 width="264"
                 height="260"
@@ -223,7 +251,11 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/ourteam/img-1.jpg"
+                srcset="
+                  ./images/ourteam/img2_264.jpg 264w,
+                  ./images/ourteam/img2_528.jpg 528w
+                "
+                src="./images/ourteam/img2_264.jpg"
                 alt="photo Tom"
                 width="264"
                 height="260"
@@ -285,7 +317,11 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/ourteam/img-2.jpg"
+                srcset="
+                  ./images/ourteam/img3_264.jpg 264w,
+                  ./images/ourteam/img3_528.jpg 528w
+                "
+                src="./images/ourteam/img3_264.jpg"
                 alt="photo Camila"
                 width="264"
                 height="260"
@@ -347,7 +383,11 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/ourteam/img-3.jpg"
+                srcset="
+                  ./images/ourteam/img4_264.jpg 264w,
+                  ./images/ourteam/img4_528.jpg 528w
+                "
+                src="./images/ourteam/img4_264.jpg"
                 alt="photo Daniel"
                 width="264"
                 height="260"
@@ -563,7 +603,6 @@
           >Leave your contacts and we will call you back</strong
         >
         <form class="modal-form" name="contact-form">
-          <!-- name -->
           <label class="modal-form-label" for="user_name">Name</label>
           <div class="modal-form-field">
             <input
@@ -577,7 +616,7 @@
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
-          <!-- phone -->
+
           <label class="modal-form-label" for="user_phone">Phone</label>
           <div class="modal-form-field">
             <input
@@ -591,7 +630,7 @@
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </div>
-          <!-- email -->
+
           <label class="modal-form-label" for="user_email_modal">Email</label>
           <div class="modal-form-field">
             <input
@@ -605,7 +644,7 @@
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </div>
-          <!-- comment -->
+
           <label class="modal-form-label" for="user_comment">Comment</label>
           <textarea
             class="modal-textarea"
@@ -634,6 +673,100 @@
         </form>
       </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle-close js-close-menu">
+        <svg class="mobile-menu-close-btn" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-menu-item">
+          <a href="./index.html" class="mobile-menu-link current link"
+            >Studio</a
+          >
+        </li>
+        <li class="mobile-menu-item">
+          <a href="./portfolio.html" class="mobile-menu-link link">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="" class="mobile-menu-link link">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-contacts-list list">
+        <li>
+          <a href="tel:+110001111111" class="mobile-tel-link link"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a href="mailto:info@devstudio.com" class="mobile-mail-link link"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+
+      <ul class="mobile-social-madia-list list">
+        <li class="mobile-social-item">
+          <a
+            class="mobile-social-media-link link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="instagram icon"
+            ><svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a
+            class="mobile-social-media-link link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="twitter icon"
+            ><svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a
+            class="mobile-social-media-link link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="facebook icon"
+            ><svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="mobile-social-item">
+          <a
+            class="mobile-social-media-link link"
+            href="https://www.linkedin.com "
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin icon"
+            ><svg class="icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
